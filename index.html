@@ -1,0 +1,894 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D-Tech-Computer-Education || AI</title>
+    <style>
+        /* Reset default browser styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        /* Body background */
+        body {
+            background-color: #f4fbff;
+        }
+
+        /* Header */
+        header {
+            background-color: #e3f2fd;
+            border-bottom: 4px solid #d32f2f;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        #head h1 {
+            font-size: 30px;
+            color: #000;
+            margin: 0;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 40px;
+        }
+
+        nav img {
+            height: 60px;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        /* Menu links (if added later) */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #0d47a1;
+            font-size: 18px;
+            font-weight: 600;
+            padding: 8px 14px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        nav ul li a:hover {
+            background-color: #d32f2f;
+            color: #ffffff;
+        }
+
+        /* ========================= MAIN SECTION ========================= */
+        main {
+            background: radial-gradient(circle at top left, rgb(15, 15, 25), rgb(5, 5, 15));
+            padding: 40px 5%;
+            color: #fff;
+            min-height: 100vh;
+        }
+
+        /* Center all section headings */
+        main h1 {
+            text-align: center;
+            color: rgb(246, 197, 0);
+            text-shadow: 0 0 15px rgba(201, 80, 24, 0.7);
+            font-size: 2rem;
+            margin: 60px 0 30px;
+        }
+
+        /* Card grid */
+        .ai-tools {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+            gap: 30px;
+            justify-content: center;
+        }
+
+        /* Each Card */
+        .ai-tools div {
+            background: rgba(20, 20, 30, 0.9);
+            border: 2px solid rgba(0, 255, 255, 0.4);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+            border-radius: 16px;
+            text-align: center;
+            padding: 25px 20px;
+            transition: all 0.3s ease;
+            height: 450px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .ai-tools div:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 25px rgba(0, 255, 200, 0.7),
+                0 0 45px rgba(0, 255, 255, 0.3);
+            border-color: rgba(0, 255, 255, 0.8);
+        }
+
+        /* Images */
+        .ai-tools img {
+            width: 150px;
+            height: 150px;
+            object-fit: contain;
+            border-radius: 10px;
+            margin: 0 auto 15px;
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Links (Tool names) */
+        .ai-tools a {
+            display: inline-block;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            background: linear-gradient(90deg, rgb(0, 255, 200), rgb(0, 255, 255));
+            padding: 10px 18px;
+            border-radius: 25px;
+            box-shadow: 0 0 12px rgba(0, 255, 255, 0.4);
+            transition: 0.3s;
+        }
+
+        .ai-tools a:hover {
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
+        }
+
+        /* Description text */
+        .ai-tools p {
+            font-size: 0.95rem;
+            line-height: 1.5;
+            color: rgb(200, 255, 255);
+            text-shadow: 0 0 4px rgba(0, 255, 255, 0.2);
+        }
+
+        /* Responsive fix */
+        @media (max-width: 600px) {
+            .ai-tools div {
+                height: auto;
+            }
+        }
+
+        /* ========================= FOOTER ========================= */
+        footer {
+            background-color: #0d47a1;
+            color: #ffffff;
+            padding: 40px 80px;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        footer div:first-child {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        footer img {
+            height: 70px;
+            border-radius: 6px;
+        }
+
+        footer h1 {
+            font-size: 25px;
+            color: #ffffff;
+        }
+
+        footer p {
+            font-size: 18px;
+            margin-bottom: 8px;
+            color: #e3f2fd;
+        }
+
+        footer p:last-child {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #ffcccb;
+        }
+
+      /* Responsive fix for mobile view */
+@media (max-width: 600px) {
+
+    /* HEADER adjustments */
+    nav {
+        flex-direction: column;
+        text-align: center;
+        padding: 10px 15px;
+        gap: 8px;
+    }
+
+    nav img {
+        height: 45px; /* smaller logo size */
+        width: auto;
+        margin-bottom: 5px;
+    }
+
+    #head h1 {
+        font-size: 20px; /* smaller text */
+        line-height: 1.3;
+        margin-top: 5px;
+    }
+
+    /* GRID layout - show 2 per row */
+    .ai-tools {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .ai-tools div {
+        height: auto;
+        padding: 15px 10px;
+    }
+
+    .ai-tools img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .ai-tools a {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .ai-tools p {
+        font-size: 0.8rem;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+        margin: 40px 0 20px;
+    }
+}
+
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div>
+                <img src="D-tech-logo.jpeg">
+            </div>
+            <div id="head">
+                <h1>D-Tech Computer Education</h1>
+            </div>
+        </nav>
+    </header>
+    <main>
+
+        <h1>Social Media Skills</h1>
+
+        <div class="ai-tools">
+            <div>
+                <img src="pictory.png" alt="Pictory">
+                <a href="https://pictory.ai/" target="_blank">Pictory</a>
+                <p>Pictory is an AI-powered video creation and editing tool designed to automatically create short,
+                    engaging branded videos from long-form content like blog posts, scripts, and webinars.
+                </p>
+            </div>
+
+            <div>
+                <img src="veed.png" alt="VEED.IO">
+                <a href="https://www.veed.io/" target="_blank">VEED.IO</a>
+                <p>VEED.IO is a browser-based, AI-powered video editing platform designed for rapid content creation,
+                    marketing, and corporate communication. It allows users to edit, record, and share videos without
+                    downloading complex software.
+                </p>
+            </div>
+
+            <div>
+                <img src="bee.png" alt="SocialBee">
+                <a href="https://socialbee.com/" target="_blank">SocialBee</a>
+                <p>SocialBee is an AI-powered social media management tool designed to streamline content creation,
+                    scheduling, and analytics across multiple platforms (Facebook, X, LinkedIn, Instagram, Pinterest,
+                    Google Business Profile, TikTok, YouTube). .
+                </p>
+            </div>
+
+            <div>
+                <img src="instag3d.png" alt="Insta 3D AI">
+                <a href="https://insta3d.com/" target="_blank">Insta 3D AI</a>
+                <p>"Insta 3D AI" commonly refers to tools used to generate 3D models or 3D-style images for social
+                    media, particularly for creating viral "3D photo" trends on Instagram, TikTok, and YouTube. These
+                    tools allow users to transform 2D photos or text descriptions into high-quality, 3D-rendered
+                    characters and figures.
+                </p>
+            </div>
+
+            <div>
+                <img src="ap.png" alt="Adobe Podcast">
+                <a href="https://podcast.adobe.com/en" target="_blank">Adobe Podcast</a>
+                <p>Adobe Podcast is a web-based, AI-powered audio platform designed to record, edit, and enhance audio
+                    for podcasters and content creators. It features industry-leading tools like "Enhance Speech" to
+                    remove background noise/echo, "Studio" for browser-based, multi-track recording
+                </p>
+            </div>
+
+            <div>
+                <img src="micmonster.png" alt="MicMonster">
+                <a href="https://micmonster.com/" target="_blank">MicMonster</a>
+                <p>MicMonster is an AI-powered text-to-speech tool used to generate, edit, and export natural-sounding,
+                    human-like voiceovers for videos, podcasts, and audiobooks. It features over 600+ voices across 140+
+                    languages, with specialized emotional tones (cheerful, sad, angry) and advanced pitch/speed
+                    controls.
+                </p>
+            </div>
+
+
+            <div>
+                <img src="leonardo.png" alt="Leonardo.ai">
+                <a href="https://leonardo.ai/" target="_blank">Leonardo.ai</a>
+                <p>Leonardo.ai is a powerful, creator-first generative AI platform used primarily for creating
+                    high-quality, professional-grade images, art, game assets, and short videos.
+                </p>
+            </div>
+
+        </div>
+
+        <h1> Computer and SmartPhone Tools</h1>
+        <div class="ai-tools">
+            <div>
+                <img src="gemini.png" alt="google gemini">
+                <a href="https://gemini.google.com/app" target="_blank">Google Gemini</a>
+                <p>Google Gemini is used for AI-powered tasks like answering questions, content creation, coding help,
+                    data analysis, and improving productivity through smart automation and reasoning.</p>
+            </div>
+
+            <div>
+                <img src="inshort.png" alt="inshort">
+                <a href="https://inshorts.com/" target="_blank">Inshorts</a>
+                <p>Inshorts uses AI to automatically summarize long news articles into short, easy-to-read 60-word
+                    stories, helping users stay updated quickly.
+                    It also uses AI to personalize the news feed based on user interests and reading behavior, ensuring
+                    relevant and engaging content.
+                </p>
+            </div>
+
+            <div>
+                <img src="evernote.png" alt="inshort">
+                <a href="https://evernote.com/" target="_blank">Evernote</a>
+                <p>Evernote is a versatile digital note-taking app used to capture, organize, and manage various types
+                    of information like text, images, audio, and web content, acting as a digital filing cabinet synced
+                    across devices for personal and professional organization, project planning, recipe storage, trip
+                    planning, and task management.
+                </p>
+            </div>
+
+            <div>
+                <img src="otter.png" alt="inshort">
+                <a href="https://otter.ai/" target="_blank">Otter. ai</a>
+                <p>Otter.ai is an AI-powered transcription service that automatically converts spoken audio and video
+                    into searchable, editable text, acting as an intelligent meeting assistant for real-time notes,
+                    summaries, and action items.
+                </p>
+            </div>
+
+            <div>
+                <img src="googlefit.png" alt="inshort">
+                <a href="https://www.google.com/fit/" target="_blank">Google Fit</a>
+                <p>Google Fit works by using your phone or wearable's sensors to automatically track movement (steps,
+                    distance, workouts) and integrates with other apps/devices to provide a unified health dashboard,
+                    focusing on Heart Points (earned from activity intensity) and steps as key metrics to help you meet
+                    WHO' goals, estimating calories burned and merging data for accuracy.
+                </p>
+            </div>
+        </div>
+
+        <h1> Smart Typing Skills</h1>
+        <div class="ai-tools">
+            <div>
+                <img src="quillboat.png" alt="inshort">
+                <a href="https://quillbot.com/" target="_blank">Quillbot</a>
+                <p>QuillBot is an AI writing tool used to improve writing clarity, confidence, and efficiency through
+                    features like paraphrasing, grammar/spell-checking, summarizing, and citation generation, helping
+                    users rephrase text, check for errors, condense information, and format sources for academic,
+                    professional, or personal projects
+                </p>
+            </div>
+
+            <div>
+                <img src="grammarly.png" alt="inshort">
+                <a href="https://support.grammarly.com/hc/en-us/articles/115000090792-What-is-Grammarly"
+                    target="_blank">Grammarly</a>
+                <p>Grammarly is an AI writing assistant used to improve writing clarity, correctness, and effectiveness
+                    by checking grammar, spelling, punctuation, tone, and conciseness, offering suggestions for stronger
+                    vocabulary, sentence structure, and even generating content from scratch.</p>
+            </div>
+
+            <div>
+                <img src="bhashini.png" alt="inshort">
+                <a href="https://bhashini.gov.in/" target="_blank">Bhashini</a>
+                <p>Bhashini is an Indian AI-powered platform designed to break down language barriers by providing
+                    seamless translation (text, voice, video) across India's diverse languages, enabling digital
+                    services, e-governance, education, and information access for citizens in their native tongue.</p>
+            </div>
+
+            <div>
+                <img src="typing bolt.png" alt="inshort">
+                <a href="typingbolt.com" target="_blank">Typing Bolt</a>
+                <p>Typing Bolt is an AI-powered online typing tutor used to improve typing speed and accuracy through
+                    personalized lessons, real-time feedback, and performance tracking, featuring adaptive lessons,
+                    multiplayer games, and certificates for achieving professional levels.</p>
+            </div>
+
+
+            <div>
+                <img src="googledoc.png" alt="inshort">
+                <a href="https://docs.google.com/document/d/17U6uq6NHKdiIlFP9nRnK3RJY8PGdIw--WEPF_U6LhFo/edit?tab=t.0"
+                    target="_blank">Google Docs Voice Typing</a>
+                <p>Google Docs Voice Typing lets you dictate text hands-free, transcribing your speech into words for
+                    faster writing, note-taking, and brainstorming, while also allowing for edits and punctuation using
+                    voice commands, making documents more accessible and efficient. </p>
+            </div>
+        </div>
+
+        <h1>Daily Life Skills</h1>
+        <div class="ai-tools">
+            <div>
+                <img src="brainnfm.png" alt="inshort">
+                <a href="https://www.brain.fm/" target="_blank">Brain.fm</a>
+                <p>Brain.fm is a functional music app that uses patented, neuroscience-backed technology to help users
+                    improve focus, relaxation, meditation, and sleep by guiding brainwaves into optimal states for
+                    specific tasks, acting like a mental "do not disturb" switch that boosts productivity and reduces
+                    stress.
+                </p>
+            </div>
+
+            <div>
+                <img src="clickup.png" alt="inshort">
+                <a href="https://clickup.com/features" target="_blank">ClickUp</a>
+                <p>ClickUp is an all-in-one productivity platform used for project management, task tracking, team
+                    collaboration, and workflow automation, bringing together tools like docs, chat, goals, and AI to
+                    help teams manage work from planning to delivery, across various departments like marketing,
+                    software, and agencies.
+                </p>
+            </div>
+
+            <div>
+                <img src="map.png" alt="inshort">
+                <a href="https://www.google.com/maps" target="_blank">Google Maps</a>
+                <p>Google Maps is used for navigation (turn-by-turn directions, real-time traffic), exploration
+                    (discovering local places, restaurants, activities, reviews, menus), planning (creating lists,
+                    finding public transit/walking/biking routes, saving places), and virtual exploration (Street View,
+                    satellite imagery, Immersive View)
+                </p>
+            </div>
+
+            <div>
+                <img src="todoits.png" alt="inshort">
+                <a href="https://www.todoist.com/" target="_blank">Todoist</a>
+                <p>Todoist is used as a powerful yet simple task and project management app to capture, organize,
+                    prioritize, and track tasks across personal life and teams, helping users manage everything from
+                    daily chores to complex projects with features like natural language input, recurring dates,
+                    sub-tasks, labels, filters.
+                </p>
+            </div>
+
+            <div>
+                <img src="habatic.png" alt="inshort">
+                <a href="https://habitica.com/static/home" target="_blank">Habitica</a>
+                <p>Habitica is a free productivity app that gamifies real-life tasks, turning them into a role-playing
+                    game (RPG) where you create an avatar, earn gold and experience for completing habits, dailies, and
+                    to-dos, and use rewards to level up, buy gear, and customize your character
+                </p>
+            </div>
+
+        </div>
+
+        <h1>Office Productivity Skills</h1>
+        <div class="ai-tools">
+            <div>
+                <img src="trello.png" alt="inshort">
+                <a href="https://trello.com/" target="_blank">Trello</a>
+                <p>To use Trello, create a Board, add Lists (like "To Do," "Doing," "Done"), and then create Cards for
+                    each task, moving them across lists as you progress, using features like descriptions, due dates,
+                    labels, and attachments to manage details and collaboration.
+                </p>
+            </div>
+            <div>
+                <img src="udio.png" alt="inshort">
+                <a href="https://www.udio.com/" target="_blank">Udio</a>
+                <p>Udio is an AI-powered music generator that creates original songs, including vocals and
+                    instrumentation, from simple text prompts. It is primarily used by musicians, content creators, and
+                    hobbyists to quickly and affordably produce unique music without needing formal musical skills.
+                </p>
+            </div>
+
+            <div>
+                <img src="Semantic Scholar.png" alt="Semantic Scholar">
+                <a href="https://www.semanticscholar.org/" target="_blank">Semantic Scholar</a>
+                <p>Semantic Scholar is a free, AI-powered academic search engine developed by the Allen Institute for AI
+                    to accelerate scientific discovery. It uses natural language processing and machine learning to
+                    analyze over 200 million papers across all fields, providing key features like TLDR summaries.
+                </p>
+            </div>
+
+            <div>
+                <img src="asana.png" alt="Asana AI">
+                <a href="https://asana.com/product/ai" target="_blank">Asana AI</a>
+                <p>Asana AI is an integrated suite of features powered by LLMs (like OpenAI and Anthropic) that
+                    automates project management, generates content, summarizes tasks, and provides intelligent insights
+                    to boost productivity.
+            </div>
+
+            <div>
+                <img src="gmial.png" alt="Gmail - Help Me Write">
+                <a href="" target="_blank">Gmail - Help Me Write</a>
+                <p>The "Help Me Write" feature in Gmail uses generative AI. It is powered by Google's Gemini models. The
+                    feature helps users draft, reply to, and refine emails within the compose window.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h1> Digital India Skills </h1>
+        <div class="ai-tools">
+            <div>
+                <img src="nsdl.png" alt="NSDL">
+                <a href="https://nsdl.co.in/" target="_blank">NSDL</a>
+                <p>National Securities Depository Limited (NSDL) has increasingly incorporated Artificial Intelligence
+                    (AI) and Machine Learning (ML) to enhance security, efficiency, and compliance in India's securities
+                    market
+                </p>
+            </div>
+
+            <div>
+                <img src="digiloc.png" alt="DigiLocker">
+                <a href="https://www.digilocker.gov.in/" target="_blank">DigiLocker</a>
+                <p>DigiLocker leverages advanced technology for secure, paperless document management, incorporating AI
+                    for enhanced security, document processing, and user verification.
+                </p>
+            </div>
+
+            <div>
+                <img src="umang.png" alt="UMANG">
+                <a href="https://web.umang.gov.in/landing/" target="_blank">UMANG</a>
+                <p>UMANG (Unified Mobile Application for New-age Governance) uses AI primarily through conversational
+                    AI, including voice bots and chatbots, to enhance user accessibility to over 2,000 government
+                    services.
+                </p>
+            </div>
+
+            <div>
+                <img src="disha.png" alt="IRCTC's Ask Disha 2.0">
+                <a href="https://askdisha.irctc.co.in/" target="_blank">IRCTC's Ask Disha 2.0</a>
+                <p>IRCTC's Ask Disha 2.0 is an advanced AI-powered chatbot developed with CoRover.ai, designed to
+                    provide conversational, multilingual, and voice-enabled support for booking tickets, checking PNR
+                    status, and managing cancellations without requiring a password.
+                </p>
+            </div>
+
+            <div>
+                <img src="gram.png" alt="GramCover">
+                <a href="https://www.gramcover.com/" target="_blank">GramCover</a>
+                <p>GramCover utilizes AI and technology to streamline rural insurance distribution, focusing on
+                    AI-powered chatbots for instant policy/claim updates, and proprietary algorithms to assess risk.
+                </p>
+            </div>
+
+
+        </div>
+
+        <h1> Job Readiness Skills</h1>
+        <div class="ai-tools">
+            <div>
+                <img src="frepic.png" alt="Freepik">
+                <a href="https://www.freepik.com/ai" target="_blank">Freepik</a>
+                <p>Freepik has evolved into a comprehensive AI-powered creative suite, incorporating multiple advanced
+                    models for generating, editing, and upscaling images and videos. It allows users to create, modify,
+                    and export AI-generated content for commercial use.
+                </p>
+            </div>
+
+            <div>
+                <img src="rr.png" alt="ResearchRabbit">
+                <a href="https://www.researchrabbit.ai/" target="_blank">ResearchRabbit</a>
+                <p>ResearchRabbit is used to accelerate and visualize literature reviews, making it easier to discover
+                    academic papers, authors, and research networks. It acts as a "Spotify for papers," mapping citation
+                    networks to uncover hidden connections, identify research gaps, and organize research efficiently
+                    without endless, manual searches.
+                </p>
+            </div>
+
+            <div>
+                <img src="af.png" alt="Adobe Firefly">
+                <a href="https://www.adobe.com/in/products/firefly.html" target="_blank">Adobe Firefly</a>
+                <p>Adobe Firefly is used to accelerate the creative process, allowing users to generate, edit, and
+                    transform images, videos, audio, and text effects using simple, everyday language. It is designed to
+                    be commercially safe, trained specifically on Adobe Stock, openly licensed content, and public
+                    domain material.
+                </p>
+            </div>
+
+            <div>
+                <img src="linkdin.png" alt="LinkedIn">
+                <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
+                <p>LinkedIn is the world's largest professional network, used primarily for career development, job
+                    searching, and professional networking, boasting over 1 billion members.
+                </p>
+            </div>
+
+            <div>
+                <img src="naukri.png" alt="Naukri">
+                <a href="https://www.naukri.com/recruit/login" target="_blank">Naukri</a>
+                <p>Naukri is primarily used as India's leading job portal to discover, apply for, and secure employment
+                    opportunities across various industries. Job seekers use it to create searchable, detailed profiles,
+                    apply with one click to thousands of jobs, and get recruited directly, while recruiters use it to
+                    find and hire talent.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h1>
+            New Age Study Skills
+        </h1>
+        <div class="ai-tools">
+            <div>
+                <img src="animaker.png" alt="Animaker">
+                <a href="https://www.animaker.com/" target="_blank">Animaker</a>
+                <p>Animaker is used as a cloud-based, do-it-yourself (DIY) video creation platform that allows
+                    users—regardless of technical skill level—to create studio-quality animated and live-action videos
+                    in minutes.
+                </p>
+            </div>
+
+            <div>
+                <img src="coconote.png" alt="Coconote.app">
+                <a href="https://coconote.app/" target="_blank">Coconote.app</a>
+                <p>Coconote.app is primarily used as an AI-powered note-taking assistant designed to help students and
+                    professionals convert audio (lectures, meetings), videos, and other media into organized notes,
+                    summaries, and study materials.
+                </p>
+            </div>
+
+            <div>
+                <img src="wunway.png" alt="runwayml">
+                <a href="https://runwayml.com/" target="_blank">runwayml</a>
+                <p>Runway ML is used by creatives, marketers, and filmmakers to generate, edit, and enhance
+                    high-fidelity videos and images using AI, significantly reducing production time and costs. It
+                    offers intuitive, browser-based tools for tasks like text-to-video, image animation, background
+                    removal, and style transfer without requiring deep technical knowledge.
+                </p>
+            </div>
+
+            <div>
+                <img src="READ.PNG" alt="Read Along">
+                <a href="https://readalong.google/" target="_blank">Read Along</a>
+                <p>Read Along (formerly known as Google Bolo) is a free Android and web-based application designed by
+                    Google to help children aged 5 and above improve their reading skills in multiple languages. It acts
+                    as an AI-powered reading tutor, allowing children to read aloud with assistance from an in-app
+                    helper named "Diya".
+                </p>
+            </div>
+
+            <div>
+                <img src="perplexity.png" alt="Perplexity AI">
+                <a href="https://readalong.google/" target="_blank">Perplexity AI</a>
+                <p>Perplexity AI is favored as a research-focused, AI-powered answer engine that provides real-time
+                    information with direct, clickable citations. It bridges the gap between conversational chatbots
+                    (like ChatGPT) and traditional search engines (like Google) by offering accurate, summarized, and
+                    verified answers rather than just a list of links.
+                </p>
+            </div>
+
+        </div>
+
+        <h1>
+            Cyber Security Skills
+
+        </h1>
+        <div class="ai-tools">
+            <div>
+                <img src="avast.png" alt="Avast Mobile Security">
+                <a href="https://www.avast.com/en-in/index#pc" target="_blank">Avast Mobile Security</a>
+                <p>Avast Mobile Security is used to protect Android and iOS devices from malware, ransomware, phishing,
+                    and spyware, with over 435 million users globally.
+                </p>
+            </div>
+
+            <div>
+                <img src="hackme.png" alt="TryHackMe">
+                <a href="https://tryhackme.com/about" target="_blank">TryHackMe</a>
+                <p>TryHackMe is used to learn, practice, and master cybersecurity skills through hands-on,
+                    browser-based, and gamified labs. It bridges the gap between theory and real-world application,
+                    offering structured learning paths for all levels—from beginners to advanced professionals—covering
+                    both offensive (red team) and defensive (blue team) security.
+                </p>
+            </div>
+
+        </div>
+
+
+
+        <h1>
+            Google Tools Skills
+        </h1>
+        <div class="ai-tools">
+            <div>
+                <img src="aistudio.png" alt="Google AI Studio">
+                <a href="https://aistudio.google.com/" target="_blank">Google AI Studio</a>
+                <p>Google AI Studio is a free, web-based prototyping environment for developers and researchers to
+                    quickly test, customize, and build applications using Gemini models. It enables rapid prototyping
+                    through natural language prompt design, allows API key generation for integration into apps, and
+                    supports multimodal inputs including text, images, and video.
+                </p>
+            </div>
+
+            <div>
+                <img src="lens.png" alt="Google Lens">
+                <a href="https://lens.google/" target="_blank">Google Lens</a>
+                <p>Google Lens identifies, translates, and searches objects, text, or products by pointing your phone’s
+                    camera or using an image. Access it via the Google App/widget camera icon, Google Photos, or
+                    dedicated app. It works for shopping, translating, copying text, solving homework, and identifying
+                    plants/animals.
+                </p>
+            </div>
+
+            <div>
+                <img src="drive.png" alt="Google Drive">
+                <a href="https://workspace.google.com/intl/en_in/products/drive/" target="_blank">Google Drive</a>
+                <p>AI integration with Google Drive, primarily through Gemini for Google Workspace, changes cloud
+                    storage. It changes storage from a filing system into an intelligent workspace. AI uses machine
+                    learning to automate file management, improve searches, and create content from stored documents.
+                </p>
+            </div>
+
+            <div>
+                <img src="notebook.png" alt="NotebookLM">
+                <a href="https://notebooklm.google/?gad_source=1&gad_campaignid=22621550558&gbraid=0AAAAA-fwSsesUvSAhw7TSGzMs6n7WN1U9&gclid=CjwKCAiAwNDMBhBfEiwAd7ti1A3DBi3EswWGJGoejBxaN6hNwaGuUyjE_-B3LsEmqrTF3TdOjSTvYRoCTPUQAvD_BwE"
+                    target="_blank">NotebookLM</a>
+                <p>NotebookLM is a Google AI-powered research and note-taking assistant that allows users to ground a
+                    Gemini model in specific documents (PDFs, Google Docs/Slides, websites, YouTube links) for accurate,
+                    citation-backed summaries, Q&A, and content creation.
+                </p>
+            </div>
+
+        </div>
+
+        <h1>
+            Netiquettes, Ergonomics & Go Green Skills
+        </h1>
+        <div class="ai-tools">
+            <div>
+                <img src="aistudio.png" alt="Replika">
+                <a href="https://replika.com/?srsltid=AfmBOooR3lXtXQ86XBEIlRZwZN3QbonpfjgfYXxWfDvQZ1a0TdvSaIXQ"
+                    target="_blank">Replika</a>
+                <p>Replika is an AI-powered chatbot application designed to serve as a personalized, 24/7 digital
+                    companion. It is used for a variety of purposes, ranging from combating loneliness and managing
+                    mental well-being to creative roleplay and casual conversation.
+                </p>
+            </div>
+
+            <div>
+                <img src="earth.png" alt="Earth Hero">
+                <a href="https://www.earthhero.org/" target="_blank">Earth Hero</a>
+                <p>The Earth Hero app is a tool designed to help users track, reduce, and manage their carbon footprint
+                    through practical, personalized actions. It empowers individuals to combat climate change by
+                    offering hundreds of actionable, science-based tips in areas like travel, food, and energy.
+                </p>
+            </div>
+
+
+            <div>
+                <img src="haiper.png" alt="Haiper.ai">
+                <a href="https://haiper.ai/" target="_blank">Haiper.ai</a>
+                <p>Haiper.ai is an AI-powered video generation platform used to create high-quality, short-form videos
+                    (typically 2-4 seconds) from text, images, and, in some cases, existing footage. It enables users to
+                    animate static images, generate scenes from descriptions for social media or marketing, and edit
+                    video content through a user-friendly web interface.
+                </p>
+            </div>
+
+            <div>
+                <img src="hedra.png" alt="Hedra">
+                <a href="https://www.hedra.com/" target="_blank">Hedra</a>
+                <p>Hedra is an AI-powered content creation platform designed primarily for creating high-quality,
+                    expressive, and synchronized talking-head videos from still images and audio input. It is used to
+                    generate short, character-driven videos (up to 90 seconds) for social media, marketing, and,
+                    increasingly, for educational content.
+                </p>
+            </div>
+
+            <div>
+                <img src="wordout.png" alt="Home Workout - No Equipment">
+                <a href="https://play.google.com/store/apps/details?id=homeworkout.homeworkouts.noequipment&hl=en_IN"
+                    target="_blank">Home Workout - No Equipment</a>
+                <p>Home Workout - No Equipment apps and routines use bodyweight exercises—such as push-ups, squats,
+                    lunges, planks, and jumping jacks—to build muscle, increase strength, and boost cardiovascular
+                    fitness without needing a gym. These workouts are highly effective, convenient, and scalable for all
+                    fitness levels.
+                </p>
+            </div>
+
+        </div>
+
+
+        <h1>
+            Basic Coding & AI Skills
+        </h1>
+        <div class="ai-tools">
+            <div>
+                <img src="mimo.png" alt="Mimo">
+                <a href="https://mimo.org/" target="_blank">Mimo</a>
+                <p>Mimo AI is primarily a coding education platform (app/web) that utilizes AI to help beginners learn
+                    programming (Python, JS, HTML, CSS), providing instant feedback, code explanations, and
+                    project-building assistance.
+                </p>
+            </div>
+
+
+            <div>
+                <img src="tyinker.png" alt="Tynker">
+                <a href="https://tynkerai.com/" target="_blank">Tynker</a>
+                <p>Tynker AI provides a comprehensive, block-based, and text-based coding platform (for ages 7+)
+                    designed to teach artificial intelligence, machine learning, and data science through hands-on,
+                    creative projects
+                </p>
+            </div>
+
+            <div>
+                <img src="w3school.pg.png" alt="W3Schools">
+                <a href="https://www.w3schools.com/ai/ai_whatis.asp" target="_blank">W3Schools</a>
+                <p>W3Schools uses AI in two primary ways: for educational tools to personalize the learning experience
+                    and as a subject of tutorials to teach users about AI and Machine Learning.
+                </p>
+            </div>
+
+            <div>
+                <img src="claude.png" alt="Claude AI">
+                <a href="https://claude.ai/login" target="_blank">Claude AI</a>
+                <p>Claude AI is a versatile, conversational AI assistant from Anthropic designed for advanced text
+                    analysis, coding, creative writing, and complex reasoning. It enables users to summarize documents,
+                    generate code, and analyze data via a chat interface or API.
+                </p>
+            </div>
+
+            <div>
+                <img src="AWS.PNG" alt="Amazon CodeWhisperer">
+                <a href="https://aws.amazon.com/video/watch/50a3d784916/#:~:text=Amazon%20CodeWhisperer%20is%20a%20machine,tailored%20to%20specific%20use%20cases."
+                    target="_blank">Amazon CodeWhisperer</a>
+                <p>Amazon CodeWhisperer is a machine learning-powered service that enhances developer productivity by
+                    providing contextual code recommendations. It generates code snippets or entire functions based on
+                    comments and existing code, tailored to specific use cases.
+                </p>
+            </div>
+
+        </div>
+
+
+
+    </main>
+    <footer>
+        <div>
+            <img src="D-tech-logo.jpeg">
+            <h1>D-Tech Computer Education</h1>
+        </div>
+        <div>
+
+            <p>📍Amrut Nagar, Opposite Ciba Society, Ghatkopar West</p>
+            <p>📱9773689063</p>
+            <p>📩dtechcomputereducation4@gmail.com</p>
+            <p>All Copyright &copy; Reserve By D-Tech Computer Education</p>
+
+        </div>
+    </footer>
+</body>
+
+</html>
